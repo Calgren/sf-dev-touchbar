@@ -1,16 +1,13 @@
 # Salesforce Dev Touchbar Extension
 Extension which adds useful commands for developing on SF platform to your Mac Touchbar.
 
+![Touchbar screenshot](https://github.com/Calgren/sf-dev-touchbar/blob/dev/assets/readmeTouchbar.png?raw=true)
 
 ## Installation
 
 Add unziped repository to ~/.vscode/extensions
 
 ## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
 
 This extension contributes the following settings:
 
