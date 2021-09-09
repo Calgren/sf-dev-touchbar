@@ -18,7 +18,21 @@ function activate(context) {
       vscode.commands.executeCommand("sfdx.force.source.pull");
     }
   );
-  context.subscriptions.push(reformat, scratchOrgPush, scratchOrgPull);
+  const focusTerminal = vscode.commands.registerCommand(
+    "extension.focusTerminal",
+    () => {
+      vscode.commands.executeCommand(
+        "workbench.action.terminal.toggleTerminal"
+      );
+    }
+  );
+
+  context.subscriptions.push(
+    reformat,
+    scratchOrgPush,
+    scratchOrgPull,
+    focusTerminal
+  );
 }
 exports.activate = activate;
 function deactivate() {}

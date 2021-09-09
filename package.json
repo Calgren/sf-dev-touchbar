@@ -23,6 +23,11 @@
                 "title": "SFDX Push"
             },
             {
+                "command": "extension.focusTerminal",
+                "title": "Terminal",
+                "icon": "./assets/terminalIcon.png"
+            },
+            {
                 "command": "extension.reformat",
                 "title": "Format File"
             }
@@ -31,17 +36,22 @@
             "touchBar": [
                 {
                     "command": "extension.scratchOrgPull",
-                    "group": "editing",
+                    "group": "2@2",
                     "when":"config.sf-dev-touchbar.enableScratchPull"
                 },
                 {
                     "command": "extension.scratchOrgPush",
-                    "group": "editing",
+                    "group": "2@1",
                     "when":"config.sf-dev-touchbar.enableScratchPush"
                 },
                 {
+                    "command": "extension.focusTerminal",
+                    "group": "1@1",
+                    "when":"config.sf-dev-touchbar.enableTerminalToggle"
+                },
+                {
                     "command": "extension.reformat",
-                    "group": "editing",
+                    "group": "0@1",
                     "when":"config.sf-dev-touchbar.enableReformat"
                 }
             ]
@@ -60,6 +70,11 @@
                         "type": "boolean",
                         "default": true,
                         "description": "Pushes diff source to default scratch org."
+                    },
+                    "sf-dev-touchbar.enableTerminalToggle": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Focuses Terminal"
                     },
                     "sf-dev-touchbar.enableScratchPull": {
                         "type": "boolean",
