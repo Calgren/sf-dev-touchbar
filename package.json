@@ -29,30 +29,41 @@
             },
             {
                 "command": "extension.reformat",
-                "title": "Format File"
+                "title": "Format File",
+                "icon": "./assets/refromatIcon.png"
+            },
+            {
+                "command": "extension.gitCommit",
+                "title": "Git Commit",
+                "icon": "./assets/commitIcon.png"
             }
         ],
         "menus": {
             "touchBar": [
                 {
                     "command": "extension.scratchOrgPull",
-                    "group": "2@2",
+                    "group": "2sfdx@2",
                     "when":"config.sf-dev-touchbar.enableScratchPull"
                 },
                 {
                     "command": "extension.scratchOrgPush",
-                    "group": "2@1",
+                    "group": "2sfdx@1",
                     "when":"config.sf-dev-touchbar.enableScratchPush"
                 },
                 {
                     "command": "extension.focusTerminal",
-                    "group": "1@1",
+                    "group": "1terminal@1",
                     "when":"config.sf-dev-touchbar.enableTerminalToggle"
                 },
                 {
                     "command": "extension.reformat",
-                    "group": "0@1",
+                    "group": "0format@1",
                     "when":"config.sf-dev-touchbar.enableReformat"
+                },
+                {
+                    "command": "extension.gitCommit",
+                    "group": "3git@1",
+                    "when":"config.sf-dev-touchbar.enableGitCommit"
                 }
             ]
         },
@@ -80,6 +91,11 @@
                         "type": "boolean",
                         "default": true,
                         "description": "Pulls diff source from default scratch org."
+                    },
+                    "sf-dev-touchbar.enableGitCommit": {
+                        "type": "boolean",
+                        "default": true,
+                        "description": "Commits changes to checkouted branch."
                     }
                 }
             }

@@ -15,3 +15,4 @@ This extension contributes the following settings:
 * `sf-dev-touchbar.enableScratchPush`: Pushes diff source to default scratch org.
 * `sf-dev-touchbar.enableScratchPull`: Pulls diff source from default scratch org.
 * `sf-dev-touchbar.enableTerminalToggle`: Toggles Terminal
+* `sf-dev-touchbar.enableGitCommit`: Shows input for commit message and performs git commit.
