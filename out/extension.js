@@ -27,11 +27,19 @@ function activate(context) {
     }
   );
 
+  const gitCommit = vscode.commands.registerCommand(
+    "extension.gitCommit",
+    () => {
+      vscode.commands.executeCommand("git.commit");
+    }
+  );
+
   context.subscriptions.push(
     reformat,
     scratchOrgPush,
     scratchOrgPull,
-    focusTerminal
+    focusTerminal,
+    gitCommit
   );
 }
 exports.activate = activate;
